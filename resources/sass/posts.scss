@@ -1,0 +1,14 @@
+.posts {
+    @media screen and (min-width: 1200px) {
+        max-width: 960px;
+    }
+
+    .comments-cont {
+        .comment-items {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+    }
+}

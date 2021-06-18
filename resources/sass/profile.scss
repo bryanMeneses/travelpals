@@ -1,0 +1,44 @@
+.dashboard {
+    .stats {
+        .card {
+            border-radius: 16px;
+        }
+    }
+
+    .stats-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        background-color: #000;
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile {
+        .main-info {
+            background: linear-gradient(90deg, $red, $orange);
+            .profile__img {
+                width: 168px;
+                height: 168px;
+                object-fit: cover;
+            }
+        }
+        .sub-info {
+            .header {
+                color: $darkgray;
+            }
+            article {
+                p {
+                    white-space: pre-line;
+                }
+            }
+            hr {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

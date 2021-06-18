@@ -1,0 +1,48 @@
+.home {
+    .hero {
+        background-image: url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80");
+        background-size: cover;
+        position: relative;
+        height: calc(100vh - 54px);
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 3.25rem;
+            }
+            h5 {
+                font-size: 1.3rem;
+            }
+        }
+        .text-content {
+            z-index: 1;
+        }
+        .cta-btn {
+            background-color: $orange;
+            border-radius: 0.5rem;
+        }
+    }
+    .info {
+        height: 520px;
+        background: linear-gradient(90deg, $red, $orange);
+        .divider {
+            height: 0.2rem;
+            width: 50%;
+            margin: 1.5rem 0 1.5rem auto;
+            max-width: 12.25rem;
+            background-color: #fff;
+            opacity: 1;
+        }
+        .subheading {
+            max-width: 540px;
+            margin-left: auto;
+        }
+    }
+}
