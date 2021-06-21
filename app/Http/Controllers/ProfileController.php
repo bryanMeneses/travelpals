@@ -23,6 +23,7 @@ class ProfileController extends Controller
     {
         $this->middleware('auth');
         $this->middleware('profile.isNull')->except(['create', 'store']);
+        $this->middleware('profile.has')->only(['create']);
     }
 
     public function index()
@@ -60,7 +61,6 @@ class ProfileController extends Controller
             'description' => 'required',
             'languages' => 'required',
             'travel_list' => 'required',
-            'image' => 'nullable|mimes:jpg,png,jpeg|max:2048'
         ]);
 
         auth()->user()->profile()->create($request->only([
